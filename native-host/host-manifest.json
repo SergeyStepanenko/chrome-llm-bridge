@@ -1,0 +1,7 @@
+{
+  "name": "com.stepanenko.llm_bridge",
+  "description": "Local LLM bridge for Chrome extension",
+  "path": "/Users/sergeystepanenko/work/chrome-llm-bridge/native-host/host.js",
+  "type": "stdio",
+  "allowed_origins": ["chrome-extension://<EXTENSION_ID>/"]
+}

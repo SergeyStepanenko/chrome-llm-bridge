@@ -1,0 +1,30 @@
+{
+  "name": "LLM Bridge",
+  "version": "1.0",
+  "description": "Local LLM bridge for browser automation via native messaging",
+  "manifest_version": 3,
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "tabs",
+    "nativeMessaging",
+    "alarms",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "host_permissions": ["<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
